@@ -1,0 +1,70 @@
+/*Cards chicas*/ 
+
+.cards{
+    width: $w90;
+    height: 330px;
+    margin-bottom: 50px;
+    border-radius: 6px;
+    background-color: nth($colores, 1);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    cursor: default;
+    transition: all 300ms ease;
+    position: relative;
+
+  
+    img{
+        width: $w100;
+        height: 180px;
+    }
+  
+   h6.titulo-cards{
+        color: nth($colores, 2);
+        text-align: left;
+        font-weight: $bold;
+   }
+
+   button.boton-cards{
+        background-color: nth($colores, 3);
+        color: nth($colores, 1);
+        font-weight: $bold;
+        border: nth($colores, 3) solid 2px;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 5px;
+        position: absolute;
+        left: 60%;
+        top: 80%;
+    }
+}
+
+/*Cards grandes*/ 
+
+.card-grande{
+    width: 550px;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px 0px;
+    border-radius: 6px;
+    background-color: nth($colores, 1);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    cursor: default;
+    transition: all 300ms ease;
+    position: relative;
+
+    img{
+        width: $w100;
+        height: 300px;
+    }
+
+    h6.titulo-card-grande{
+        background-color: rgba(27, 25, 25, 0.5);
+        border-radius: 6px;
+        color: nth($colores, 1);
+        font-weight: $bold;
+        position: absolute;
+        bottom: 8px;
+        font-size: 22px;
+
+    } 
+
+  }

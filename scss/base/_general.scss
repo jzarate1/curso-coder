@@ -1,0 +1,37 @@
+*{
+    @include espacio (0, 0);
+    box-sizing: border-box;
+    font-family: $tipografia;
+    font-size: 1rem;
+
+    &::selection{
+        background-color: nth($colores, 2 );
+        color: nth($colores, 1);
+    }
+
+}
+
+body{
+    color: nth($colores, 2 );
+    background-image: url(./../imagenes/fondobody.png);
+
+    a {
+        text-decoration: none;
+        color: nth($colores, 5 );
+       
+        :hover{
+        color: nth($colores, 6 );
+      }  
+
+    }  
+      
+    i{
+        color: nth($colores, 3);
+            
+        :hover{
+            color: nth($colores, 6 );
+        }
+        
+    } 
+}
+

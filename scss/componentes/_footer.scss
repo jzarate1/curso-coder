@@ -1,0 +1,32 @@
+footer{
+    background-color: nth($colores, 1 );
+    width: $w100;
+    height: 50px;
+    margin-top: 25px;
+    bottom: 0;
+    position: fixed;
+
+    p.creado-por {
+        display: inline;
+        float: right;
+        align-items: center;
+        padding-right: 10px;
+        padding-top: 20px;
+        font-size: small;
+    } 
+
+
+    .img-footer{
+        width: 30px;
+        margin: 8px;
+
+        :hover{
+            opacity: 60%;
+        }  
+
+    }
+
+    .instagram{
+        margin-left: 10px;
+    }
+} 

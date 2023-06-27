@@ -1,0 +1,20 @@
+/*Duda: No se como hacer para que queden todos a la misma altura y centrados sin ponerle margins y padding, probe con justify y align pero no y no se que es lo que me lo pisa o que pasa*/
+
+img.icono-secciones{
+    width: 70%;
+    margin: 20px 0px 15px 40px ;
+  }
+   
+   h5{
+    color: nth($colores, 6);
+    padding: 0 20px ;
+    text-align: center; 
+    font-weight: $bold;
+  }
+  
+  h6{
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  } 
+  

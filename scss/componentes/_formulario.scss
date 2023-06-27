@@ -1,0 +1,41 @@
+form.comunidad {
+
+    padding: 10px 20px;
+ 
+    input[type=text] { 
+
+        @extend %input;
+
+        :focus{
+            @extend %focus;
+        }
+
+    }
+
+    input[type=email] {
+
+        @extend %input;
+
+        :focus{
+            @extend %focus;
+        }    
+
+    }
+
+    input[type=button] {
+
+        background-color: nth($colores, 6);
+        border: none;
+        border-radius: 4px;
+        color: nth($colores, 1);
+        @include espacio (10px 20px, 4px 2px);
+        text-decoration: none;
+        cursor: pointer;
+
+        :hover{
+            background-color: nth($colores, 3);
+        }
+
+    }
+  
+} 

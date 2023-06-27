@@ -1,0 +1,208 @@
+/*En común entre todas*/
+
+.grid_banner{
+  grid-area:banner;
+  width: $w100;
+
+  .banner{
+    width: $w100;
+  }  
+
+}
+
+.grid_suscripcion{
+  grid-area: suscripcion;
+  background-image: url(./../imagenes/img-unite.webp);
+  background-size: cover;
+  background-position: center;
+  @include espacio (50px 20px, 0px 20px 65px 20px);
+  color: nth($colores, 1);
+
+  h2.suscripcion{
+    color: nth($colores, 1);
+    font-weight: $bold;
+    padding: 0 20px 10px ;
+  }
+  
+  p.suscripcion{
+    padding: 0 20px;
+  } 
+
+} 
+
+h1{
+  color: nth($colores, 3);
+  padding: 15px 10px;
+  font-weight: $bold;
+}
+
+h2.titulos {
+  color: nth($colores, 3);
+  padding: 0 20px;
+}
+
+
+/*Grid index*/
+
+.grid_index{
+    @extend %grid;
+    grid-template-areas:
+      "banner banner banner banner"
+      "texto texto texto imagen"
+      "texto texto texto imagen"
+      "seccion1 seccion2 seccion3 seccion4"
+      "suscripcion suscripcion suscripcion suscripcion";
+    
+      .grid_texto{
+        grid-area:texto;
+        background-color: nth($colores, 1);
+        @include espacio (30px 0px, 35px 0px);
+        
+        p.info{
+          padding: 0 20px;
+        }
+        
+      }
+    
+      .grid_imagen{
+        grid-area:imagen;
+        background-color: nth($colores, 1);
+        width: $w100;
+        height: 90%;
+        @include espacio (30px 0px, 35px 0px);
+
+        img.yo{
+          height: 600px;
+          border: nth($colores, 7) solid 8px;
+          padding: 10px;
+        } 
+
+      }
+    
+      .grid_seccion1{
+        grid-area: seccion1;
+        width: $w90;
+        padding: 15px 0px 40px;
+      }
+    
+      .grid_seccion2{
+        grid-area: seccion2;
+        width: $w90;
+        padding: 15px 0px 50px;
+      }
+    
+      .grid_seccion3{
+        grid-area: seccion3;
+        width: $w90;
+        padding: 15px 0px 40px;
+      }
+    
+      .grid_seccion4{
+        grid-area: seccion4;
+        width: $w90;
+        padding: 15px 0px 40px;
+      }
+     
+}
+
+/*Grid artículos 1*/ 
+
+.grid-art{
+  @extend %grid;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "intro intro intro intro"
+  "art-grande art-grande art-grande1 art-grande1"
+  "art1 art2 art3 art4"
+  "suscripcion suscripcion suscripcion suscripcion";
+}
+
+/*Grid articulos 2*/
+
+div.grid-art2{
+  @extend %grid;
+  grid-template-areas: 
+  "banner banner banner banner"
+  "intro intro intro intro"
+  "art-grande art-grande art-grande1 art-grande1"
+  "art1 art2 art3 art4"
+  "pestaña none none none"
+  "art-grande2 art-grande2 art-grande3 art-grande3"
+  "art5 art6 art7 art8"
+  "suscripcion suscripcion suscripcion suscripcion";
+
+  .pestaña{
+    grid-area: pestaña;
+    width: $w100;
+
+    h4.texto-pestaña{
+      background-color: nth($colores, 3);
+      color: nth($colores, 1);
+      padding: 8px;
+      font-weight: $bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+      border-radius: 3px;
+    } 
+
+  }
+  
+  .art-grande2{
+    grid-area: art-grande2;
+  }
+  
+  .art-grande3{
+    grid-area: art-grande3;
+  }
+  
+  .art5{
+    grid-area: art5;
+  }
+  
+  .art6{
+    grid-area: art6;
+  }
+  
+  .art7{
+    grid-area: art7;
+  }
+  
+  .art8{
+    grid-area: art8;
+  } 
+}
+
+/*En común entre las grid articulos*/  
+
+.intro{
+  grid-area: intro;
+  background-color: nth($colores, 4);
+  @include espacio (30px 10px, 25px 10px);
+}
+
+.art-grande{
+  grid-area: art-grande;
+}
+
+.art-grande1{
+  grid-area: art-grande1;
+}
+
+.art1{
+  grid-area: art1;
+}
+
+.art2{
+  grid-area: art2;
+}
+
+.art3{
+  grid-area: art3;
+}
+
+.art4{
+  grid-area: art4;
+} 
+
+
+

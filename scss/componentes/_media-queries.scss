@@ -1,0 +1,251 @@
+@media only screen and (min-width:$mobile) and (max-width:$tablet){
+
+    /*En común entre todas*/
+
+    footer a img.img-footer{
+        width: 25px;
+        margin: 8px;
+      }
+    
+      .grid_suscripcion{
+          @include espacio (30px 15px, 15px 20px 45px 20px)
+      }
+
+    /*Grid index*/  
+
+    .grid_index {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "banner banner"
+      "texto texto"
+      "texto texto"
+      "seccion1 seccion2"
+      "seccion3 seccion4"
+      "suscripcion suscripcion";
+    }
+  
+    .grid_imagen{
+      display: none;
+    }
+
+    .icono-secciones{
+        width: 50%;
+        margin:0px 0px 15px 90px ;
+    }
+
+    /*GridArts*/
+  
+    .grid-art{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "banner banner"
+      "intro intro"
+      "art-grande art-grande1"
+      "art1 art2"
+      "art3 art4"
+      "suscripcion suscripcion";
+    }
+  
+  div.grid-art2{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "banner banner"
+    "intro intro"
+    "art-grande art-grande1"
+    "art1 art2"
+    "art3 art4"
+    "pestaña none"
+    "art-grande2 art-grande3"
+    "art5 art6"
+    "art7 art8"
+    "suscripcion suscripcion";
+  }
+
+    /*En común entre las grids articulos*/
+  
+    .intro{
+      @include espacio (20px 10px, 15px 10px)
+    }
+    
+    .cards{
+        width: $w90;
+        height: 300px;
+        margin-bottom: 20px;
+
+        figure{
+          overflow: hidden;
+          height: 200px;
+    
+          img{
+            height: auto;
+          }
+    
+        }
+    }
+  
+    .card-grande{
+        width: $w90;
+    }
+  
+    h6.titulo-card-grande{
+        font-size: 16px;
+    }
+
+    h6.titulo-cards{
+      font-size: 14px;
+    }
+  
+} 
+
+
+@media only screen and (max-width:$mobile){
+
+    /*En común entre todas*/
+
+    h2{
+        font-size: medium;
+    }
+
+    footer{
+        height: 40px;
+    
+        p.creado-por {
+            display: none
+        }
+    
+        img.img-footer{
+            width: 25px;
+            margin: 8px;
+        }
+    
+    }
+
+    .grid_suscripcion{
+        @include espacio (20px 10px, 5px 10px 35px 10px);
+
+        p.suscripcion{
+            font-size: small;
+        }
+
+    }
+  
+    form.comunidad {
+        padding: 8px 10px;
+
+        input[type=text] {
+            width: 20%;
+            padding: 8px;
+        }
+        
+        input[type=email] {
+            width: 20%;
+            padding: 8px;
+        }
+        
+        input[type=button] {
+            padding: 10px 15px;
+        }
+    }
+
+    /*Index*/
+
+    .grid_index {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "banner"
+      "texto"
+      "texto"
+      "seccion1"
+      "seccion2"
+      "seccion3"
+      "seccion4"
+      "suscripcion";
+    }
+  
+    .grid_imagen{
+      display: none;
+    }
+  
+    .grid_texto{
+      padding: 15px 0px;
+      margin: 10px 0px;
+    }
+    
+    img.icono-secciones{
+      width: 50%;
+      margin:0px 0px 15px 90px ;
+    }
+
+    /*GridArts*/
+  
+    .grid-art{
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "banner"
+      "intro"
+      "art-grande"
+      "art-grande1"
+      "art1"
+      "art2"
+      "art3"
+      "art4"
+      "suscripcion";
+    }
+  
+  div.grid-art2{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "banner"
+    "intro"
+    "art-grande"
+    "art-grande1"
+    "art1"
+    "art2"
+    "art3"
+    "art4"
+    "pestaña"
+    "art-grande2"
+    "art-grande3"
+    "art5"
+    "art6"
+    "art7"
+    "art8"
+    "suscripcion";
+  }
+  
+  .intro{
+    padding: 15px 10px;
+    margin: 10px 10px;
+  }
+  
+  .cards{
+    width: 90%;
+    height: 300px;
+    margin-bottom: 20px;
+
+    figure{
+      overflow: hidden;
+      height: 200px;
+
+      img{
+        height: auto;
+      }
+
+    }
+  }
+  
+  .card-grande{
+    width: 90%;
+
+    h6.titulo-card-grande{
+        font-size: 16px;
+    }
+
+    h6.titulo-cards{
+      font-size: 14px;
+    }
+    
+  }
+  
+  
+} 

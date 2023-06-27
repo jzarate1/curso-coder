@@ -1,0 +1,494 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+*::selection {
+  background-color: #604845;
+  color: #fff;
+}
+
+body {
+  color: #604845;
+  background-image: url(./../imagenes/fondobody.png);
+}
+body a {
+  text-decoration: none;
+  color: #84564e;
+}
+body a :hover {
+  color: #ff8a8a;
+}
+body i {
+  color: #b35d5d;
+}
+body i :hover {
+  color: #ff8a8a;
+}
+
+div.grid-art2, .grid-art, .grid_index {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+form.comunidad input[type=email], form.comunidad input[type=text] {
+  width: 25%;
+  padding: 8px;
+  border: 1px solid #84564e;
+  border-radius: 4px;
+}
+
+form.comunidad input[type=email] :focus, form.comunidad input[type=text] :focus {
+  outline: none;
+  border: 2px solid #ff8a8a;
+}
+
+/*Cards chicas*/
+.cards {
+  width: 90%;
+  height: 330px;
+  margin-bottom: 50px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: all 300ms ease;
+  position: relative;
+}
+.cards img {
+  width: 100%;
+  height: 180px;
+}
+.cards h6.titulo-cards {
+  color: #604845;
+  text-align: left;
+  font-weight: bold;
+}
+.cards button.boton-cards {
+  background-color: #b35d5d;
+  color: #fff;
+  font-weight: bold;
+  border: #b35d5d solid 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  left: 60%;
+  top: 80%;
+}
+
+/*Cards grandes*/
+.card-grande {
+  width: 550px;
+  height: 300px;
+  overflow: hidden;
+  margin: 20px 0px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  transition: all 300ms ease;
+  position: relative;
+}
+.card-grande img {
+  width: 100%;
+  height: 300px;
+}
+.card-grande h6.titulo-card-grande {
+  background-color: rgba(27, 25, 25, 0.5);
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  font-size: 22px;
+}
+
+/*En común entre todas*/
+.grid_banner {
+  grid-area: banner;
+  width: 100%;
+}
+.grid_banner .banner {
+  width: 100%;
+}
+
+.grid_suscripcion {
+  grid-area: suscripcion;
+  background-image: url(./../imagenes/img-unite.webp);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  margin: 0px 20px 65px 20px;
+  color: #fff;
+}
+.grid_suscripcion h2.suscripcion {
+  color: #fff;
+  font-weight: bold;
+  padding: 0 20px 10px;
+}
+.grid_suscripcion p.suscripcion {
+  padding: 0 20px;
+}
+
+h1 {
+  color: #b35d5d;
+  padding: 15px 10px;
+  font-weight: bold;
+}
+
+h2.titulos {
+  color: #b35d5d;
+  padding: 0 20px;
+}
+
+/*Grid index*/
+.grid_index {
+  grid-template-areas: "banner banner banner banner" "texto texto texto imagen" "texto texto texto imagen" "seccion1 seccion2 seccion3 seccion4" "suscripcion suscripcion suscripcion suscripcion";
+}
+.grid_index .grid_texto {
+  grid-area: texto;
+  background-color: #fff;
+  padding: 30px 0px;
+  margin: 35px 0px;
+}
+.grid_index .grid_texto p.info {
+  padding: 0 20px;
+}
+.grid_index .grid_imagen {
+  grid-area: imagen;
+  background-color: #fff;
+  width: 100%;
+  height: 90%;
+  padding: 30px 0px;
+  margin: 35px 0px;
+}
+.grid_index .grid_imagen img.yo {
+  height: 600px;
+  border: #e09999 solid 8px;
+  padding: 10px;
+}
+.grid_index .grid_seccion1 {
+  grid-area: seccion1;
+  width: 90%;
+  padding: 15px 0px 40px;
+}
+.grid_index .grid_seccion2 {
+  grid-area: seccion2;
+  width: 90%;
+  padding: 15px 0px 50px;
+}
+.grid_index .grid_seccion3 {
+  grid-area: seccion3;
+  width: 90%;
+  padding: 15px 0px 40px;
+}
+.grid_index .grid_seccion4 {
+  grid-area: seccion4;
+  width: 90%;
+  padding: 15px 0px 40px;
+}
+
+/*Grid artículos 1*/
+.grid-art {
+  grid-template-areas: "banner banner banner banner" "intro intro intro intro" "art-grande art-grande art-grande1 art-grande1" "art1 art2 art3 art4" "suscripcion suscripcion suscripcion suscripcion";
+}
+
+/*Grid articulos 2*/
+div.grid-art2 {
+  grid-template-areas: "banner banner banner banner" "intro intro intro intro" "art-grande art-grande art-grande1 art-grande1" "art1 art2 art3 art4" "pestaña none none none" "art-grande2 art-grande2 art-grande3 art-grande3" "art5 art6 art7 art8" "suscripcion suscripcion suscripcion suscripcion";
+}
+div.grid-art2 .pestaña {
+  grid-area: pestaña;
+  width: 100%;
+}
+div.grid-art2 .pestaña h4.texto-pestaña {
+  background-color: #b35d5d;
+  color: #fff;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+div.grid-art2 .art-grande2 {
+  grid-area: art-grande2;
+}
+div.grid-art2 .art-grande3 {
+  grid-area: art-grande3;
+}
+div.grid-art2 .art5 {
+  grid-area: art5;
+}
+div.grid-art2 .art6 {
+  grid-area: art6;
+}
+div.grid-art2 .art7 {
+  grid-area: art7;
+}
+div.grid-art2 .art8 {
+  grid-area: art8;
+}
+
+/*En común entre las grid articulos*/
+.intro {
+  grid-area: intro;
+  background-color: #f7edea;
+  padding: 30px 10px;
+  margin: 25px 10px;
+}
+
+.art-grande {
+  grid-area: art-grande;
+}
+
+.art-grande1 {
+  grid-area: art-grande1;
+}
+
+.art1 {
+  grid-area: art1;
+}
+
+.art2 {
+  grid-area: art2;
+}
+
+.art3 {
+  grid-area: art3;
+}
+
+.art4 {
+  grid-area: art4;
+}
+
+/*Duda: No se como hacer para que queden todos a la misma altura y centrados sin ponerle margins y padding, probe con justify y align pero no y no se que es lo que me lo pisa o que pasa*/
+img.icono-secciones {
+  width: 70%;
+  margin: 20px 0px 15px 40px;
+}
+
+h5 {
+  color: #ff8a8a;
+  padding: 0 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h6 {
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  margin-top: 25px;
+  bottom: 0;
+  position: fixed;
+}
+footer p.creado-por {
+  display: inline;
+  float: right;
+  align-items: center;
+  padding-right: 10px;
+  padding-top: 20px;
+  font-size: small;
+}
+footer .img-footer {
+  width: 30px;
+  margin: 8px;
+}
+footer .img-footer :hover {
+  opacity: 60%;
+}
+footer .instagram {
+  margin-left: 10px;
+}
+
+nav {
+  background-color: #fff;
+}
+nav .nav-item {
+  color: #84564e;
+}
+nav .nav-item :hover {
+  color: #ff8a8a;
+}
+nav .activo {
+  color: #ff8a8a;
+  font-weight: bold;
+}
+
+form.comunidad {
+  padding: 10px 20px;
+}
+form.comunidad input[type=button] {
+  background-color: #ff8a8a;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 4px 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+form.comunidad input[type=button] :hover {
+  background-color: #b35d5d;
+}
+
+@media only screen and (min-width: 580px) and (max-width: 960px) {
+  /*En común entre todas*/
+  footer a img.img-footer {
+    width: 25px;
+    margin: 8px;
+  }
+  .grid_suscripcion {
+    padding: 30px 15px;
+    margin: 15px 20px 45px 20px;
+  }
+  /*Grid index*/
+  .grid_index {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "banner banner" "texto texto" "texto texto" "seccion1 seccion2" "seccion3 seccion4" "suscripcion suscripcion";
+  }
+  .grid_imagen {
+    display: none;
+  }
+  .icono-secciones {
+    width: 50%;
+    margin: 0px 0px 15px 90px;
+  }
+  /*GridArts*/
+  .grid-art {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "banner banner" "intro intro" "art-grande art-grande1" "art1 art2" "art3 art4" "suscripcion suscripcion";
+  }
+  div.grid-art2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "banner banner" "intro intro" "art-grande art-grande1" "art1 art2" "art3 art4" "pestaña none" "art-grande2 art-grande3" "art5 art6" "art7 art8" "suscripcion suscripcion";
+  }
+  /*En común entre las grids articulos*/
+  .intro {
+    padding: 20px 10px;
+    margin: 15px 10px;
+  }
+  .cards {
+    width: 90%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .cards figure {
+    overflow: hidden;
+    height: 200px;
+  }
+  .cards figure img {
+    height: auto;
+  }
+  .card-grande {
+    width: 90%;
+  }
+  h6.titulo-card-grande {
+    font-size: 16px;
+  }
+  h6.titulo-cards {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  /*En común entre todas*/
+  h2 {
+    font-size: medium;
+  }
+  footer {
+    height: 40px;
+  }
+  footer p.creado-por {
+    display: none;
+  }
+  footer img.img-footer {
+    width: 25px;
+    margin: 8px;
+  }
+  .grid_suscripcion {
+    padding: 20px 10px;
+    margin: 5px 10px 35px 10px;
+  }
+  .grid_suscripcion p.suscripcion {
+    font-size: small;
+  }
+  form.comunidad {
+    padding: 8px 10px;
+  }
+  form.comunidad input[type=text] {
+    width: 20%;
+    padding: 8px;
+  }
+  form.comunidad input[type=email] {
+    width: 20%;
+    padding: 8px;
+  }
+  form.comunidad input[type=button] {
+    padding: 10px 15px;
+  }
+  /*Index*/
+  .grid_index {
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner" "texto" "texto" "seccion1" "seccion2" "seccion3" "seccion4" "suscripcion";
+  }
+  .grid_imagen {
+    display: none;
+  }
+  .grid_texto {
+    padding: 15px 0px;
+    margin: 10px 0px;
+  }
+  img.icono-secciones {
+    width: 50%;
+    margin: 0px 0px 15px 90px;
+  }
+  /*GridArts*/
+  .grid-art {
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner" "intro" "art-grande" "art-grande1" "art1" "art2" "art3" "art4" "suscripcion";
+  }
+  div.grid-art2 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner" "intro" "art-grande" "art-grande1" "art1" "art2" "art3" "art4" "pestaña" "art-grande2" "art-grande3" "art5" "art6" "art7" "art8" "suscripcion";
+  }
+  .intro {
+    padding: 15px 10px;
+    margin: 10px 10px;
+  }
+  .cards {
+    width: 90%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .cards figure {
+    overflow: hidden;
+    height: 200px;
+  }
+  .cards figure img {
+    height: auto;
+  }
+  .card-grande {
+    width: 90%;
+  }
+  .card-grande h6.titulo-card-grande {
+    font-size: 16px;
+  }
+  .card-grande h6.titulo-cards {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
